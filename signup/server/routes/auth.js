@@ -2,6 +2,11 @@ const router = require("express").Router();
 const { User } = require("../models/user");
 const bcrypt = require("bcrypt");
 const Joi = require("joi");
+const bcrypt = require("bcrypt");
+const Token = require('../models/token')
+const sendEmail=require('../utils/sendmail')
+const crypto = require("crypto")
+
 
 router.post("/", async (req, res) => {
 	try {
